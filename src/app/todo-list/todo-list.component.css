@@ -1,0 +1,99 @@
+/* todo-list.component.css */
+
+div {
+  max-width: 400px;
+  max-height: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+}
+
+input {
+  margin: 10px auto;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+button {
+  margin-left: 10px;
+  font-size: 12px;
+  vertical-align: middle; /* Align the buttons vertically with the text */
+}
+
+button.close-button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Dim the background on hover */
+}
+
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+
+.lists-container {
+  flex-wrap: wrap;
+  gap: 20px;
+  border: #fff;
+  overflow: scroll;
+  text-align: left;
+}
+
+.todo-list {
+  width: 100%;
+  max-width: 300px;
+  border: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+  text-align: left;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+}
+
+.list-body {
+  margin-top: 10px;
+}
+
+.add-todo {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mat-icon {
+  font-size: 12px;
+}
+
+.completed {
+  color: #757575;
+}
+
+.mat-strikethrough {
+  text-decoration: line-through;
+}
+
+.pinned-list {
+  border: 2px solid #ff9800;
+}

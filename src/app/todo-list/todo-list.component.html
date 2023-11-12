@@ -1,0 +1,32 @@
+
+<div>
+  <input matInput [(ngModel)]="newTodo" placeholder="Add new to-do"  (keydown.enter)="addTodo()"/>
+  <button mat-raised-button extended color="primary"
+    (click)="addTodo()">
+    <mat-icon>add</mat-icon>
+  </button>
+  <ul>
+    <li *ngFor="let todo of todos; let i = index"
+      ngClass="{ 'completed': todo.completed}">
+      <button mat-icon-button color="primary" (click)="removeTodo(i)">
+        <mat-icon>close</mat-icon>
+      </button>
+      <span [class.mat-strikethrough]="todo.completed">{{ todo.text }}</span>
+      <button mat-icon-button color="primary" (click)="markAsCompleted(i)">
+        <mat-icon> {{ todo.completed ? 'check_box' : 'check_box_outline_blank'
+          }}</mat-icon>
+      </button>
+    </li>
+  </ul>
+  
+  <!-- <div class="action-buttons">
+    <button mat-icon-button color="primary" (click)="pinList(i)">
+      <mat-icon>push_pin</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" (click)="saveList(i)">
+      <mat-icon>save</mat-icon>
+    </button>
+ 
+  </div>  -->
+
+</div>
